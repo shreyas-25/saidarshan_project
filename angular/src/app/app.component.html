@@ -1,0 +1,47 @@
+<h1 style="text-align: center;color: black; background-color: orange">Welcome to Sai Darshan Website</h1>
+
+<!-- Load an icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="navbar">
+  <a *ngIf="!isLogin" class="active" routerLink="/home"><i class="fa fa-fw fa-user"></i> Home</a>
+  <ng-container *ngIf="isLogin">
+    <a *ngIf="!isRole" class="active" routerLink="/userdashboard"><i class="fa fa-fw fa-user"></i> Home</a>
+    <a *ngIf="isRole" class="active" routerLink="/admin"><i class="fa fa-fw fa-user"></i> Home</a>
+  </ng-container>
+  <a routerLink="/about"><i class="fa fa-fw fa-search"></i> About us </a>
+  <a routerLink="/contact"><i class="fa fa-fw fa-envelope"></i> Contact us </a>
+  <!-- <a *ngIf="isLogin==true" class="fa-user" routerLink="/admin/getuser"><i class="fa fa-fw fa-user"></i> User List</a> -->
+  <!-- <a *ngIf="isLogin==true" class="fa-user" routerLink="/booking"><i class="fa fa-fw fa-user"></i> Darshan Booking</a>  -->
+
+  <!-- <a routerLink="/login"><i class="fa fa-fw fa-envelope"></i> Login</a>
+  <a routerLink="/signup"><i class="fa fa-fw fa-user"></i> Register</a> -->
+  <div class="topnav-right">
+    <!-- <a routerLink="/login" ><i class="fa fa-fw fa-user"></i>Login</a> -->
+    <li *ngIf="!isLogin">
+      <a routerLink="/login">Login</a>
+    </li>
+
+    <li *ngIf="isLogin">
+      <a (click)="logout()">Logout</a>
+    </li>
+    <!-- <li *ngIf="isLogin">
+    <a routerLink="/profile">Update Profile</a>
+</li> -->
+    <li *ngIf="!isLogin">
+      <a routerLink="/register"><i class="fa fa-fw fa-envelope"></i>Register Here</a>
+    </li>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="navbar">
+
+  <a routerLink="/about"><i class="fa fa-fw fa-search"></i> About us </a>
+  <a routerLink="/contact"><i class="fa fa-fw fa-search"></i> Contact us </a>
+  <a routerLink="/"><i class="fa fa-fw fa-home"></i> How to reach? </a>
+  <!-- <a routerLink="/admin"><i class="fa fa-fw fa-search"></i> Admin Dashboard </a> -->
+</div>

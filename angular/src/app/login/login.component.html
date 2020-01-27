@@ -1,0 +1,29 @@
+
+<form #loginForm="ngForm" (ngSubmit)="login(loginForm)" role="form">
+  <div class="imgcontainer">
+    <img src="../../assets/images/saibaba.jpg" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="email"><b>Email</b></label>
+    <input type="email" ngModel name="email" class="form-control" id="" placeholder="Enter Username"  required>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password"  ngModel name="password" class="form-control" id="" placeholder="Enter Password" required >
+
+    <button type="submit" style="color: black">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <!-- <button type="button" class="cancelbtn">Cancel</button> -->
+    &nbsp;&nbsp;&nbsp;
+    <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
+    <a routerLink="/forgot" style="color: red"><i class="password?"></i>Forgot Password</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a routerLink="/register">Doesn't have an Account ?   Register here.</a>
+  </div>
+</form>
+

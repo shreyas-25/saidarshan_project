@@ -1,0 +1,51 @@
+
+<h3 style="align-self: center; color: brown; text-align: center; text-decoration-line: underline">Booked Slots</h3>  
+
+<div><a style="color: blue; text-decoration-line: underline; margin-left: 20px"   routerLink="/admin" >Previous</a></div>
+&nbsp;
+&nbsp;
+&nbsp;
+
+<div class="table-responsive">
+  <table  class="table table-hover counter">
+    <thead style="background-color:rgb(155, 153, 153); color:black">
+      <tr>
+        <th>Sr. No.</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Mobile</th>
+        <th>Email</th>
+        <th>Booked slots</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of user">
+        <td></td>
+        <td >{{u.firstName}}</td>
+        <td>{{u.lastName}}</td>
+        <td>{{u.mobileNo}}</td>
+        <td>{{u.email}}</td>
+        <td routerLink="/admin/getlist" style="color: blue; text-decoration-line: underline" (click)="getBookedSlotList(u.userId)">More details. . .</td>
+        <!-- <ng-container *ngIf="u.darshanBooking">        
+        <td>{{u.darshanBooking[0].noOfPeople}}</td>   
+        <td>{{u.darshanBooking[0].date | date:"dd/MM/yyyy"}}</td>
+        <td>{{u.darshanBooking[0].slot}}</td>
+
+        <td>{{u.darshanBooking[1].noOfPeople}}</td>   
+        <td>{{u.darshanBooking[1].date | date:"dd/MM/yyyy"}}</td>
+        <td>{{u.darshanBooking[1].slot}}</td>
+      </ng-container>   -->
+      <!-- <ng-container *ngIf="!u.darshanBooking">        
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>   
+      </ng-container>   -->
+      </tr>
+      <div style="color: blue;"  >
+        {{msg}}
+      </div>
+
+    </tbody>
+  </table>
+</div>

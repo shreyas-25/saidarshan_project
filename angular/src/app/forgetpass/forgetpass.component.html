@@ -1,0 +1,20 @@
+<!-- #myForm="ngForm" (ngSubmit)="getotp(myForm.value)" -->
+
+<div>
+  <form   role="form" style=" margin-left: 30%">
+    <legend style="text-align: inherit; color: red; text-decoration-line: underline">Enter registered email</legend>
+  
+    <div  class="form-group">
+      <label for="email">Email</label>
+      <input [(ngModel)]="name" style="width: 300px;" type="text" class="form-control" name="email" id="email" placeholder="xyz@mail.com">
+    </div>
+  
+    <button type="button"  (click)="getotp(name)" class="btn btn-warning" style="color: black;">Get OTP</button>
+  
+    <div style="color:red;">{{msg}}</div>
+  
+  
+  </form>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+  </div>

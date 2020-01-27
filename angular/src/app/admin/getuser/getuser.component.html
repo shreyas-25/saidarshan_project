@@ -1,0 +1,36 @@
+
+<h3 style="align-self: center;">User List</h3>  
+
+<div><a style="color: blue;" routerLink="/admin">Previous</a></div>
+&nbsp;
+&nbsp;
+
+<div class="table-responsive">
+  <table  class="table table-hover counter">
+    <thead style="background-color:rgb(155, 153, 153); color:black">
+      <tr>
+        <th>Sr. No.</th>
+        <th>User Id</th>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>Email</th>
+        <th>Toggle status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of user">
+        <td></td>
+        <td>{{u.userId}}</td>
+        <td>{{u.firstName}}</td>
+        <td>{{u.mobileNo}}</td>
+        <td>{{u.email}}</td>        
+        <td><a style="color: blue;"  (click)="changeStatus(u.userId)" *ngIf="u.status"  href="/getuser" > enable </a>
+        <a style="color: blue;"  (click)="changeStatus(u.userId)" *ngIf="!u.status"  href="/getuser" > disable </a></td>
+      </tr>
+      <div style="color: blue;"  >
+        {{msg}}
+      </div>
+
+    </tbody>
+  </table>
+</div>

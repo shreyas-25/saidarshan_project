@@ -1,0 +1,46 @@
+<form #bookingForm="ngForm" (ngSubmit)="booking(bookingForm)" role="form" style="border:1px solid #ccc" ngNativeValidate method="POST">
+  <div class="imgcontainer">
+    <img src="../../assets/images/saibaba.jpg" alt="Avatar" class="avatar">
+  </div>
+  <div class="container">
+    <h1 style="text-align: center;">Booking</h1>
+    <hr>
+    <div class="table-responsive" >
+      <table class="table table-hover" >
+        <tbody>
+            <tr>
+                <td hidden>
+                    <input type="number"   name="userId" [(ngModel)]="data" class="form-control" id="" hidden>
+                </td>
+          <tr>
+            <td>
+                <label for="date"><b>Date</b></label>
+                <input type="date"   name="date" ngModel class="form-control"  required>
+            </td>
+          </tr>
+          <tr>
+            <td>    
+                <label for="noOfPeople"><b>No of persons</b></label>
+                <input type="number" placeholder="Enter no of person" name="noOfPeople" ngModel class="form-control" id="" min="1" max="6" required>
+          
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <label for="slot"><b>Slot</b>&nbsp;</label>
+                <select id="slot" ngModel  name="slot" class="form-control">
+                    <option value="SLOT1" >SLOT1</option>
+                     <option value="SLOT2">SLOT2</option>
+                  </select>       
+            </td>
+           
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <div class="clearfix">
+      <button type="submit" class="next">Next</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,33 @@
+
+<h3 style="align-self: center;">Slots Booked by User</h3>  
+
+<div><a style="color: blue;" routerLink="/admin/bookedslots">Previous</a></div>
+&nbsp;
+&nbsp;
+
+<div class="table-responsive">
+  <table  class="table table-hover counter">
+    <thead style="background-color: rgb(155, 153, 153)">
+      <tr>
+        <th>Sr. No.</th>
+        <th>Booking Id</th>
+        <th>No Of People</th>
+        <th>Date</th>
+        <th>Slot</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of user">
+        <td></td>
+        <td>{{u.darshanId}}</td>
+        <td>{{u.noOfPeople}}</td>
+        <td>{{u.date | date:"dd/MM/yyyy"}}</td>
+        <td>{{u.slot}}</td>        
+      </tr>
+      <div style="color: blue;"  >
+        {{msg}}
+      </div>
+
+    </tbody>
+  </table>
+</div>
